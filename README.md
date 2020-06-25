@@ -9,3 +9,15 @@
 
  # Function arguments
 The function takes a string that can contain just a position like `a1`, `a 1`, `1a`, `1 a`. Character case doesn't matter. Or it can be like `row 1 column 2`, `row 1 2 column`, `row 1 column b`. Important thing is the number of a column or a row should go next to its key word (key word is `column` and `row`) and the string only should contain `column` and `row` and its positions. Key words can be in russian.
+
+## How to use
+```
+await getCellData('a1');
+await getCellData('строка 1 стобец 2');
+await getCellData('1 row column 2');
+```
+```
+getCellData('a1').then(res => console.log(res));
+getCellData('строка 1 стобец 2').then(res => console.log(res));
+getCellData('1 row column 2').then(res => console.log(res));
+```
